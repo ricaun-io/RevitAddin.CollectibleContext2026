@@ -22,9 +22,9 @@ If the assembly is loaded in a collectible context, and the `Resolver` selects t
 
 The exception `NotSupportedException: A non-collectible assembly may not reference a collectible assembly.` happens and the addin fail to load the assembly dependencie.
 
-<img width="50%" alt="Revit2026Issue" src="https://github.com/user-attachments/assets/cb533f80-d598-4ec1-9475-d5cb6621e322" />
+<img width="100%" alt="Revit2026Issue" src="https://github.com/user-attachments/assets/cb533f80-d598-4ec1-9475-d5cb6621e322" />
 
-This issue only happens in Revit 2026 that has this shared assembly context implementation.
+**This issue only happens in Revit 2026 that has this shared assembly context implementation.**
 
 ### Revit API Forum
 
