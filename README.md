@@ -1,6 +1,6 @@
 # RevitAddin.CollectibleContext2026
 
-[![Revit 2019](https://img.shields.io/badge/Revit-2019+-blue.svg)](https://github.com/ricaun-io/RevitAddin.CollectibleContext2026)
+[![Revit 2025](https://img.shields.io/badge/Revit-2025+-blue.svg)](https://github.com/ricaun-io/RevitAddin.CollectibleContext2026)
 [![Visual Studio 2022](https://img.shields.io/badge/Visual%20Studio-2022-blue)](https://github.com/ricaun-io/RevitAddin.CollectibleContext2026)
 [![Nuke](https://img.shields.io/badge/Nuke-Build-blue)](https://nuke.build/)
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -18,7 +18,13 @@ The problem is there a internal implementation that share the assembly even if i
 
 There is another specific problem with this `Resolver` pointing to the assembly in a different context, which this project is design to reproduce.
 
-...
+If the assembly is loaded in a collectible context, and the `Resolver` selects that assembly to use in the `Default` or `non-collectible` context.
+
+The exception `NotSupportedException: A non-collectible assembly may not reference a collectible assembly.` happens and the addin fail to load the assembly dependencie.
+
+<img width="50%" alt="Revit2026Issue" src="https://github.com/user-attachments/assets/cb533f80-d598-4ec1-9475-d5cb6621e322" />
+
+This issue only happens in Revit 2026 that has this shared assembly context implementation.
 
 ### Revit API Forum
 
